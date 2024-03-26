@@ -1,12 +1,11 @@
-package java.required.part6;
+package java.required.part6.ch10;
 
-import javax.security.sasl.SaslClient;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class ch10_01_dfs {
+public class Ch10_01_Dfs {
     static int[][] direction ={
             //좌, 우, 상 ,하
             {-1,0},{1,0},{0,-1},{0,1}
