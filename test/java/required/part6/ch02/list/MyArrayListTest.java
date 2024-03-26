@@ -1,8 +1,6 @@
-package java.required.part6.ch02.array;
+package java.required.part6.ch02.list;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class MyArrayListTest {
 
