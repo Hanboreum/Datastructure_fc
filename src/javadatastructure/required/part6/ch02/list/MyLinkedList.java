@@ -1,6 +1,5 @@
-package java.required.part6.ch02.list;
+package javadatastructure.required.part6.ch02.list;
 //ch02-04 linkedlist2
-import org.w3c.dom.Node;
 
 public class MyLinkedList<T> implements IList<T>{
     //몇개의 사이즈가 있는지
@@ -33,7 +32,6 @@ public class MyLinkedList<T> implements IList<T>{
         if( index > this.size || index <0){
             throw new IndexOutOfBoundsException();
         }
-
         //데이터를 다 미뤄주는게 아니라 포인터를 다룬다
         //이전노드 prev
         // 현재노드 curr = prev.next

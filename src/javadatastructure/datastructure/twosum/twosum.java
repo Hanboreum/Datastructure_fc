@@ -1,4 +1,4 @@
-package java.datastructure.twosum;
+package javadatastructure.datastructure.twosum;
 
 public class twosum {
    //target에게 인덱스 값을 리턴해야함.
@@ -10,6 +10,16 @@ public class twosum {
     // 정답이 될 가능성이 있는 것을 모두 탐색
    public static void main(String[] args) {
 
+       int[] nums = {1,2,3,4,7,6,5,1};
+       int target =4;
+       Solution solution = new Solution();
+       int[] result1 = solution.twoSum(nums,target);
+       System.out.println(result1[0] +" "+ result1[1]);
+
+       Solution2 solution2 = new Solution2();
+       int[] result2 = solution2.threeSum(nums, target);
+       System.out.println(result2[1] + " "+ result2[1] + " "+ result2[2]);
+
    }
 
 }
@@ -19,7 +29,7 @@ class Solution {
         for( int i=0; i< nums.length; i++){
             for( int j= i+1; j<=nums.length; j++){
                 if(nums[i]+ nums[j]== target){
-                    //return new int[]{i,j};
+                    return new int[]{i,j};
                 }
             }
         }
@@ -32,7 +42,7 @@ class Solution2{
     public int[] threeSum(int[] nums, int target){
         for( int i=0; i< nums.length; i++){
             for(int j= i+1; j< nums.length; j++){
-                for(int k= j+1;k < nums.length; i++){
+                for(int k= j+1; k < nums.length; k++){
                     if(nums[i] + nums[j]+ nums[k] == target){
                         return new int[]{i,j,k};
                     }
@@ -41,9 +51,5 @@ class Solution2{
         }
         return null;
     }
-}
-
-class Solution3{
-
 }
 

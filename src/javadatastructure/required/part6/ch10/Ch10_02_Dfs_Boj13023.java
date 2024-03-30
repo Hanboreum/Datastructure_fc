@@ -1,4 +1,4 @@
-package java.required.part6.ch10;
+package javadatastructure.required.part6.ch10;
 
 import javax.swing.*;
 import java.util.ArrayList;

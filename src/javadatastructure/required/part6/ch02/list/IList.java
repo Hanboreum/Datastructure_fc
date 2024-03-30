@@ -1,4 +1,4 @@
-package java.required.part6.ch02.list;
+package javadatastructure.required.part6.ch02.list;
 
 public interface IList <T>{
     void add(T t);

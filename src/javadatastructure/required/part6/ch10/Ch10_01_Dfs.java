@@ -1,4 +1,4 @@
-package java.required.part6.ch10;
+package javadatastructure.required.part6.ch10;
 
 import java.util.ArrayList;
 import java.util.Collections;
