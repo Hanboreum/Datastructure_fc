@@ -1,4 +1,4 @@
-package javadatastructure.required.ch4queue;
+package javadatastructure.required.part6.ch4queue;
 
 import java.util.LinkedList;
 import java.util.Queue;
