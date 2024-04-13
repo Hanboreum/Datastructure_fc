@@ -1,6 +1,8 @@
 package javadatastructure.required.ch9Graph;
 
 import com.sun.source.tree.IfTree;
+import javadatastructure.required.part6.ch02.stack.IStack;
+import javadatastructure.required.part6.ch02.stack.MyStack;
 
 import javax.swing.*;
 import java.util.*;
@@ -31,6 +33,33 @@ public class GraphAlgorithms {
         }
         return result; //방문 결과값 출력
     }
+
+    public static List<Integer> dfs(IGraph iGraph, int from){
+        List<Integer> result = new ArrayList<>();//결과반환
+        Set<Integer> visited = new HashSet<>();// 중복 방문 방지
+
+        //dfs를 위한 stack
+        Stack <Integer> stack = new Stack<>();
+        //from 부터 탐색 시작.
+        stack.push(from);
+        visited.add(from);
+
+        while(stack.size() > 0){//스택이 빌 때까지 탐색
+            Integer next = stack.pop(); //스택 가장 위에 있는 노드 방문
+            result.add(next); //방문 확인
+
+            //next노드에 연결되어 있는 노드들을 가져와 아직 방문하지 않은 노드라면
+            //stack에 추가해 while문을 통해 연속적으로 dfs 탐색이 이루어지게
+            //더 이상 연결 노드가 없다면 for의 내부 로직이 실행되지 않음.-> 스택에 추가되는 노드 없음
+            //혹은 연결된 노드들이 이미 다 방문한 노드인 경우에도 stack에 더 이상 노드가 추가되지 않음
+
+            for( Integer n : iGraph.getNodes(next)){
+                stack.push(n);
+                visited.add(n);
+            }
+        }
+        return result;
+    }
 }
 
 class test{
@@ -53,6 +82,9 @@ class test{
             }
         }
         return result;
+
+
+
     }
 
     public static void bfs3( IGraph iGraph,int from){
