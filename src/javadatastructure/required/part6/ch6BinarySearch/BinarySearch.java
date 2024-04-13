@@ -1,5 +1,7 @@
 package javadatastructure.required.part6.ch6BinarySearch;
 
+import java.util.Scanner;
+
 public class BinarySearch {
     public int serach(int arr[], int target){
         //1. 데이터의 중간 인덱스 값을 찾는다
