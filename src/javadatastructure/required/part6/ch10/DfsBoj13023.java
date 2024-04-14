@@ -1,12 +1,11 @@
 package javadatastructure.required.part6.ch10;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 //백준 13023 ABCDE
-public class Ch10_02_Dfs_Boj13023 {
+public class DfsBoj13023 {
     static boolean found = false;
 
     public static void main(String[] args) {
